@@ -8,28 +8,6 @@ local info = [[
 	https://www.moddb.com/news/mesa-preta-dubs
 ]]
 
---[[
-	GSP solves a VERY SPECIFIC problem: having all the sentences.txt
-	sounds of a goldsource game selected and copied into a separate
-	folder.
-
-	This means we can easily identify MANY sounds that weren't used,
-	especially in relation to the VOX system, and replace files more
-	safely, since "mods" like Opposing Force pull many sentence.txt
-	audios directly from the "valve" folder instead of their own.
-
-	That's it, I hope it'll be useful to someone.
-
-	Usage: open the CMD and execute lua54.exe gsp.lua typing the HL1
-	"mod" full path (the folder	containging the "sound" directory) as
-	the first parameter, then the rest is automatic.
-
-	e.g.
-	cd "C:/Users/vdale/Desktop/GSP"
-	.\core\lua54.exe gsp.lua "E:/SteamLibrary/steamapps/common/Half-Life/gearbox"
-
---]]
-
 -- Check if a directory or a folder exist
 local function Exists(path)
 	path = "\"" .. path .. "\"" -- Note: somehow doing this concat outside popen is workarounding a "bug" where the script thinks the path is nil when it's not -- and it's a rare thing...
